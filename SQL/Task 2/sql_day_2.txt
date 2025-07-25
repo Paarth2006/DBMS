@@ -1,0 +1,53 @@
+Step 1: Create Table - Customer
+
+
+
+CREATE TABLE Customer (
+CustomerID INT PRIMARY KEY,
+FirstName VARCHAR(50),
+LastName VARCHAR(50),
+City VARCHAR(50),
+Age INT,
+Email VARCHAR(100)
+);
+
+
+
+Step 2: Insert Sample Records
+
+
+INSERT INTO Customer VALUES
+(1, 'John', 'Doe', 'New York', 28, 'john.doe@example.com'),
+(2, 'Jane', 'Smith', 'Los Angeles', 34, 'jane.smith@gmail.com'),
+(3, 'Alice', 'Johnson', 'Chicago', 22, 'alicej@yahoo.com'),
+(4, 'Bob', 'Williams', 'Houston', 45, 'bob_w@outlook.com'),
+(5, 'Charlie', 'Brown', 'Phoenix', 31, 'charlie.b@example.com'),
+(6, 'David', 'Lee', 'Philadelphia', 29, 'davidlee@gmail.com'),
+(7, 'Eve', 'Clark', 'San Diego', 37, 'eve.clark@live.com'),
+(8, 'Frank', 'Moore', 'Dallas', 40, 'fmoore@yahoo.com'),
+(9, 'Grace', 'Taylor', 'San Jose', 25, 'gracet@gmail.com'),
+(10, 'Henry', 'Martin', 'Austin', 33, 'henrym@gmail.com');
+
+
+SOLUTIONS :-
+
+1) SELECT * from Customer WHERE AGE > 30 AND CITY = 'Phoenix';
+2) SELECT * from Customer WHERE AGE < 30 OR CITY = 'NEW YORK';
+3) SELECT * from Customer WHERE NOT CITY = 'Chicago';
+4) SELECT * from Customer WHERE AGE>25 AND NOT CITY = 'Dallas';
+5) SELECT * from Customer WHERE CITY = 'Los Angeles'  OR CITY = 'San Diego';
+6) SELECT * from Customer WHERE NOT CITY = 'NEW YORK' AND AGE < 35 ;
+7) SELECT * from Customer WHERE FIRSTNAME LIKE 'J%';
+8) SELECT * from Customer WHERE LASTNAME LIKE '%n';
+9) SELECT * from Customer WHERE EMAIL LIKE '%gmail%';
+10) SELECT * from Customer WHERE FIRSTNAME LIKE '%a%';
+11) SELECT * from Customer WHERE EMAIL LIKE '%.com';
+12) SELECT * from Customer WHERE LASTNAME LIKE '_____';
+13) SELECT * from Customer ORDER BY AGE;
+14) SELECT * from Customer ORDER BY FIRSTNAME DESC;
+15) SELECT * from Customer ORDER BY CITY , AGE;
+16) SELECT * from Customer ORDER BY LASTNAME , FIRSTNAME;
+17) SELECT * from Customer ORDER BY EMAIL DESC;
+18) SELECT * from Customer WHERE (FIRSTNAME LIKE 'A%' OR FIRSTNAME LIKE 'B%' )AND AGE > 25 ;
+19) SELECT * from Customer WHERE NOT CITY = 'Austin' AND EMAIL LIKE '%yahoo%';
+20) SELECT * from Customer WHERE (LASTNAME LIKE 'M%' OR LASTNAME LIKE '%n') ORDER BY FIRSTNAME;
