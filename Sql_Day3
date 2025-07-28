@@ -1,0 +1,55 @@
+1. Create Table
+
+CREATE TABLE Product
+(
+  ProductID INT PRIMARY KEY, 
+  ProductName VARCHAR(50),
+  Category VARCHAR(30), 
+  Price DECIMAL(10,2),
+  Quantity INT
+ );
+ 
+2. Insert Values
+
+INSERT INTO Product VALUES (1, 'Apple iPhone 14', 'Electronics', 79999.00, 20);
+INSERT INTO Product VALUES (2, 'Samsung Galaxy S22', 'Electronics', 69999.00, 25);
+INSERT INTO Product VALUES (3, 'Sony Headphones', 'Accessories', 1999.00, 100);
+INSERT INTO Product VALUES (4, 'HP Laptop', 'Computers', 55999.00, 15);
+INSERT INTO Product VALUES (5, 'Dell Mouse', 'Accessories', 499.00, 200);
+INSERT INTO Product VALUES (6, 'Canon Camera', 'Electronics', 45999.00, 10);
+INSERT INTO Product VALUES (7, 'Apple Watch', 'Wearables', 30999.00, 30);
+INSERT INTO Product VALUES (8, 'Logitech Keyboard', 'Accessories', 1299.00, 150);
+INSERT INTO Product VALUES (9, 'Samsung TV', 'Electronics', 55999.00, 5);
+INSERT INTO Product VALUES (10, 'Mi Band', 'Wearables', 1999.00, 80);
+
+3. Solutions 
+
+1)SELECT * FROM Product where ProductName LIKE 'Apple%';
+2)SELECT * FROM Product where ProductName LIKE '%Watch';
+3)SELECT * FROM Product where ProductName LIKE 'Samsung%';
+4)SELECT * FROM Product where Category = 'Electronics' OR Category = 'Computers';
+5)SELECT * FROM Product where ProductID IN (1,3,5);
+6)SELECT * FROM Product where Price BETWEEN 1000 and 20000;
+7)SELECT * FROM Product where Quantity BETWEEN 10 and 50;
+8)SELECT * FROM Product where Category = 'Electronics' AND Price > '50000';
+9)SELECT * FROM Product where Quantity > 50 AND Price < 5000;
+10)SELECT * FROM Product where Quantity < 20 OR Price > 50000;
+11)SELECT * FROM Product where Category IN ('Accessories','Wearables');
+12)SELECT * FROM Product where Category NOT IN ('Electronics');
+13)SELECT * FROM Product where Price NOT BETWEEN 1000 and 20000;
+14)SELECT * FROM Product ORDER BY Price;
+15)SELECT * FROM Product ORDER BY Quantity DESC;
+16)SELECT * FROM Product ORDER BY Category , ProductName;
+17)UPDATE Product SET Price = '599' WHERE ProductName = 'Dell Mouse';
+   SELECT * from Product WHERE ProductName = 'Dell Mouse';
+18)UPDATE Product SET Quantity = Quantity + 20 WHERE ProductName = 'Mi Band';
+   SELECT * FROM Product WHERE ProductName = 'Mi Band';
+19)UPDATE Product SET Price =2500 WHERE Category = 'Wearables';
+   SELECT * FROM Product WHERE Category = 'Wearables';
+20)UPDATE Product SET Quantity = Quantity - 5  WHERE Category = 'Electronics';
+   SELECT * FROM Product WHERE Category = 'Electronics';
+21)SELECT * FROM Product WHERE Category = 'Electronics' AND Price BETWEEN 30000 and 80000;
+22)SELECT * FROM Product WHERE Category NOT IN ('Wearables') AND Quantity > 50;
+23)SELECT * FROM Product WHERE Category  IN ('Accessories') AND Quantity > 100 AND Price < 2000;
+24)SELECT * FROM Product WHERE ProductName LIKE('S%') AND Price > 5000;
+25)SELECT * FROM Product  WHERE Category = 'Electronics' ORDER BY Quantity;
