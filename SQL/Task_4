@@ -1,0 +1,60 @@
+CREATE TABLE ACCOUNT(
+ Account_ID INT PRIMARY KEY,
+ Customer_Name VARCHAR(100),
+ Account_Type VARCHAR(20) ,
+ Balance DECIMAL(10, 2),
+ Branch_Name VARCHAR(100)
+);
+
+INSERT INTO ACCOUNT(Account_ID, Customer_Name,Account_Type, Balance, Branch_Name) VALUES (101,'Alice Sharma','Savings', 50000.00 , 'Delhi');
+INSERT INTO ACCOUNT(Account_ID, Customer_Name,Account_Type, Balance, Branch_Name) VALUES (102,'Ravi Kumar','Current', 120000.00 , 'Mumbai');
+INSERT INTO ACCOUNT(Account_ID, Customer_Name,Account_Type, Balance, Branch_Name) VALUES (103,'Sonia Mehta','Savings', 75000.00 , 'Chennai');
+INSERT INTO ACCOUNT(Account_ID, Customer_Name,Account_Type, Balance, Branch_Name) VALUES (104,'Arjun Singh','Current', 30000.00 , 'Delhi');
+INSERT INTO ACCOUNT(Account_ID, Customer_Name,Account_Type, Balance, Branch_Name) VALUES (105,'Priya Das','Savings', 62000.00 , 'Bangalore');
+
+QUERIES :-
+1)ALTER TABLE ACCOUNT ADD Email VARCHAR(100);
+
+2)ALTER TABLE ACCOUNT ADD AOD Date;
+
+3)ALTER TABLE ACCOUNT
+  MODIFY (Customer_Name VARCHAR(50));
+
+4)ALTER TABLE ACCOUNT 
+  RENAME COLUMN Balance to Account_Balance;
+
+5)ALTER TABLE ACCOUNT 
+  DROP COLUMN Email;
+
+6)ALTER TABLE ACCOUNT 
+  MODIFY ( Account_Balance DECIMAL(15,3));
+
+7)RENAME ACCOUNT TO BANK_ACCOUNT;
+
+8)UPDATE BANK_ACCOUNT
+ SET Account_Balance = 55000.00
+ WHERE Account_ID = 101;
+
+9)UPDATE BANK_ACCOUNT
+ SET Account_Balance = Account_Balance * 1.10
+ WHERE Account_Type = 'Savings';
+
+10)UPDATE BANK_ACCOUNT
+  SET Branch_Name = 'Hyderabad'
+  WHERE Account_ID = 104;
+
+11)UPDATE BANK_ACCOUNT
+   SET Account_Type = 'Premium Savings'
+   WHERE Account_Balance > 60000;
+
+12)UPDATE BANK_ACCOUNT
+  SET Account_Balance = Account_Balance - 500
+  WHERE Account_Type = 'Current';
+
+13)UPDATE BANK_ACCOUNT
+   SET Account_Balance = 125000.00, Branch_Name = 'Pune'
+   WHERE Account_ID = 102;
+
+14)UPDATE BANK_ACCOUNT
+   SET Account_Type = 'Dormant'
+   WHERE Account_Balance < 40000;
